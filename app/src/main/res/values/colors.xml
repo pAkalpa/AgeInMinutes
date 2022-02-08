@@ -9,4 +9,8 @@
     <color name="black">#FF000000</color>
     <color name="pink">#D81B60</color>
     <color name="backgroundColor">#FEF1E0</color>
+    <color name="ageTextColor">#FFFFFF</color>
+    <color name="ageTextBackgroundColor">#C846DCE0</color>
+    <color name="sDateBackground">#FFFFFF</color>
+    <color name="sDateTextColor">#C5C4C4</color>
 </resources>
