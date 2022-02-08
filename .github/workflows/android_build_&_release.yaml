@@ -4,23 +4,27 @@ on:
   push:
     tags:
       - '*'
-
+      
 jobs:
-  Gradle:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      
     - name: setup jdk
       uses: actions/setup-java@v1
       with:
-        java-version: 11
-    - name: Make Gradle executable
-      run: chmod +x ./gradlew
-    - name: Build Release APK
-      run: ./gradlew assembleRelease
-    - name: Releasing using Hub
-      uses: kyze8439690/action-release-releaseapk@master
+          java-version: 11
+
+    - name: Build debug apk
+      run: ./gradlew clean assembleDebug
+
+    - name: Create release and upload apk
+      uses: underwindfall/create-release-with-debugapk@v2.0.0
       env:
-       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-       APP_FOLDER: app/build/outputs/outputs/apk/debug/app-debug.apk
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        asset_path: app/build/outputs/apk/debug/app-debug.apk
+        asset_name: AgeInMinutes.apk
+        asset_content_type: application/zip
