@@ -24,12 +24,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/age"
-        android:padding="20dp"
-        android:textColor="@color/ageTextColor"
         android:background="@color/ageTextBackgroundColor"
+        android:padding="20dp"
+        android:text="@string/age"
+        android:textColor="@color/ageTextColor"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView3"
@@ -44,51 +45,43 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/buttonText"
         android:layout_marginTop="15dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:background="@color/sDateBackground"
+        android:text="@string/buttonText"
         android:textColor="@color/sDateTextColor"
-        android:background="@color/ageTextColor" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/textSD"
-        android:textColor="@color/textColor"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvSelectedDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/tvSD"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/minSDTitle"
-        android:textColor="@color/textColor"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textColor="@color/titleSD"
+        android:textSize="18sp"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvSelectedDateInMinutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/textMTD"
-        android:textColor="@color/textColor"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_marginTop="20dp"
+        android:textColor="@color/tvSD"
+        android:textSize="35sp" />
 
     <TextView
-        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
         android:text="@string/minMTDTitle"
-        android:textColor="@color/textColor"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textColor="@color/titleSD"
+        android:textSize="18sp"
+        tools:ignore="TextContrastCheck" />
 
 </LinearLayout>
