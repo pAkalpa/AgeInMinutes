@@ -1,6 +1,7 @@
 name: Build Debug Apk & Release Action
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - '*'
